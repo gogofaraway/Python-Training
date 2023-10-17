@@ -15,7 +15,7 @@ elif program == "c":
       print("Drama")
 elif program == "d":
       print("Math")
-
+        
 #Are you planning to enroll in any sport? a. Dance b. Golf c. Soccer d. Tennis e. Basketball
 sport= input("3. Are you planning to join any of the sport tems? \n a) Dance b) Golf c) Soccer d) Tennis e) Basketball [a/b/c/d/e]? :")
 if sport == "a":
@@ -39,7 +39,7 @@ if bus == "a":
   print("Yes")
 if bus == "b":
   print("No")
-
+  
 #Are you planning to join extended day?
 extended = input("6. Are you planning to join extended day? \n a) Yes b) No [a/b]? :")
 if extended == "a":

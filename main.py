@@ -39,3 +39,10 @@ if bus == "a":
   print("Yes")
 if bus == "b":
   print("No")
+
+#Are you planning to join extended day?
+extended = input("6. Are you planning to join extended day? \n a) Yes b) No [a/b]? :")
+if extended == "a":
+  print("Yes")
+if extended == "b":
+  print("No")

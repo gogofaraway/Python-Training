@@ -3,15 +3,6 @@
 # We'll learn about how this line of code works later in the course - for now just know it loads the colored text
 from colorama import Fore, Back, Style
 
-
-def getSixLetterWord():
-
-  word = ""
-  while(len(word) !=6):
-
-    word = input("Enter a six letter word: ")
-  return word
-
 # Function that prints out a letter with a colorful background
 def printColorfulLetter(letter, LetterInWord, LetterInCorrectPlace = False):
 
@@ -23,11 +14,12 @@ def printColorfulLetter(letter, LetterInWord, LetterInCorrectPlace = False):
   else:
 
     # ...and it's also in the right place, display it with a green background
-    if(LetterInCorrectPlace):
+
+   if(LetterInCorrectPlace):
      print(Back.LIGHTGREEN_EX + Fore.WHITE + f" {letter} ", end="")
 
     # ...but in the wrong place, display it with a yellow background
-    else:
+   else:
      print(Back.LIGHTYELLOW_EX + Fore.BLACK + f" {letter} ", end="")
 
 # Display a guess, where each letter is color-coded by it's accuracy
@@ -52,7 +44,7 @@ def printGuessAccuracy(guess, actual):
       else:
 
         # ...so we'll print it out with a yellow background
-
+  
        printColorfulLetter(letter, True, False)
     # ...but if the letter is not in the word at all...
     else:
@@ -72,21 +64,21 @@ def inputSixLetterWord():
 
 # TO-DO: Write the logic of the game here!
 # Create a variable to hold the user's guess as a dummy value
-guess = ""
+userGuess = ""
 #create a secret word
-actual = "paddle"
+secret = "paddle"
 #track how many times the user tried
 tries = 0
 #Repear the game until the user guesses correctly
-while (guess != actual and tries <5):
+while (secret != userGuess and tries <5):
 #Ask the users to enter a six letter word
- guess = inputSixLetterWord()
+ userGuess = inputSixLetterWord()
 #Disply the six letter word and show color for each word
-printGuessAccuracy(guess, actual)
+printGuessAccuracy(userGuess, secret)
 print()
 tries +=1
 #disply whether if the user wins or loses
-if(guess == actual):
+if(userGuess == secret):
   print("YOU WIN!")
 else:
   print("YOU LOSE")
